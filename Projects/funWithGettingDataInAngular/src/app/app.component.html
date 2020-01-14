@@ -2,14 +2,9 @@
   Witamy na kursie {{ title | uppercase }}<br>
   Liczba pi to : {{ pi | number: '1.1-2' }} <br>
   Dzisiaj jest: {{ date | date : 'dd-MM-yy' }} <br>
-  Mój pies to : {{ dog.name}} <br>
-  Ma {{ dog.age }} lata <br>
+  Mój pies to : {{ dog?.name}} <br>
+  <!-- Mój pies to : {{ dog && dog.name }} -->
+  Ma {{ dog?.age }} lata <br>
 </p>
 
 
-{{ showDog() | lowercase }}
-
-<br>
-
-{{ 2+2 }}
-{{ 5-3 }}

@@ -10,7 +10,7 @@ export class AppComponent {
   pi = Math.PI;
   date = new Date();
 
-  dog = new Dog('Reksio', 4);
+  dog: Dog;
 
   showDog(): string{
     return 'Moj pies to ' + this.dog.name + ' i ma ' + this.dog.age + ' lata';
