@@ -6,6 +6,7 @@ import { FirstRowComponent } from './first-row/first-row.component';
 import { SeconRowFirstColumnComponent } from './secon-row-first-column/secon-row-first-column.component';
 import { SeconRowSecondColumnComponent } from './secon-row-second-column/secon-row-second-column.component';
 import { ThirdRowComponent } from './third-row/third-row.component';
+import { ItemComponentComponent } from './item-component/item-component.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ThirdRowComponent } from './third-row/third-row.component';
     FirstRowComponent,
     SeconRowFirstColumnComponent,
     SeconRowSecondColumnComponent,
-    ThirdRowComponent
+    ThirdRowComponent,
+    ItemComponentComponent
   ],
   imports: [
     BrowserModule
