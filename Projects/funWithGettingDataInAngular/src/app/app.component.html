@@ -2,31 +2,28 @@
   Witamy na kursie {{ title | uppercase }}<br>
 </p>
 
-<div *ngIf="days.length > 0">
-  <ul>
-    <ng-container *ngFor="let day of days, let e = even">
-      <li *ngIf="e">
-        {{ day }}
-      </li>
-    </ng-container>
-  </ul>
-</div>
+<p>Dni tygodnia</p>
 
-<div *ngIf="dogs.length > 0; then areDogs; else noDogs"></div>
-
-<ng-template #areDogs>
-  <div *ngFor='let dog of dogs; let i = index'>
-    <div *ngIf="dog.age > 3">
-      {{ i + 1 }} Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
+<div *ngFor="let day of days">
+  <div [ngSwitch]="day">
+    <div *ngSwitchCase="'Poniedziałek'">
+      Montag
     </div>
+    <div *ngSwitchCase="'Wtorek'">
+      Dienstag
+    </div>
+    <div *ngSwitchCase="'Środa'">
+      Mittwoch
+    </div>
+    <div *ngSwitchCase="'Czwartek'">
+      Donnerstag
+    </div>
+    <div *ngSwitchCase="'Piątek'">
+      Frietag
+    </div>
+    <div *ngSwitchCase="'Sobota'">
+      Samstag
+    </div>
+    <div *ngSwitchDefault>Sonntag</div>
   </div>
-</ng-template>
-
-<ng-template>
-  <p>Piesków nie ma :(</p>
-</ng-template>
-
-
-
-<!-- <button (click)="addDogs()">Dodaj<button> -->
-<!-- <button (click)="removeDogs()">Usuń</button> -->
+</div>
