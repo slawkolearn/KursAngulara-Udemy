@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angulara  ';
-  pi = Math.PI;
-  date = new Date();
 
-  dog: Dog;
+ days = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobora', 'Niedziela'];
 
-  showDog(): string{
-    return 'Moj pies to ' + this.dog.name + ' i ma ' + this.dog.age + ' lata';
-  }
+ dogs = new Array<Dog>();
+
+ constructor(){
+   this.dogs.push(new Dog('Reksio', 4), new Dog('Max', 11), new Dog('Bethoven', 15));
+ }
+
 }
 
 class Dog {
