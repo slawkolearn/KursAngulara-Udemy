@@ -10,8 +10,8 @@
   </li>
 </ul>
 
-<ul>
-  <li *ngFor='let dog of dogs'>
-    Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
-  </li>
-</ul>
+<div *ngFor='let dog of dogs; let i = index'>
+  {{ i + 1 }} Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
+</div>
+
+<app-nowy *ngFor="let i of [1, 2, 3, 4]"></app-nowy>
