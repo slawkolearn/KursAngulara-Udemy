@@ -1,13 +1,13 @@
 <p>
-  Witamy na kursie {{ title }}<br>
-  Liczba pi to : {{ pi }} <br>
-  Dzisiaj jest: {{ date }} <br>
+  Witamy na kursie {{ title | uppercase }}<br>
+  Liczba pi to : {{ pi | number: '1.1-2' }} <br>
+  Dzisiaj jest: {{ date | date : 'dd-MM-yy' }} <br>
   Mój pies to : {{ dog.name}} <br>
   Ma {{ dog.age }} lata <br>
 </p>
 
 
-{{ showDog() }}
+{{ showDog() | lowercase }}
 
 <br>
 
