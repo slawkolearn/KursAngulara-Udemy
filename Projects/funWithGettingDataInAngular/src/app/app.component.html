@@ -12,8 +12,21 @@
   </ul>
 </div>
 
-<div *ngFor='let dog of dogs; let i = index'>
-  <div *ngIf="dog.age > 3">
-    {{ i + 1 }} Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
+<div *ngIf="dogs.length > 0; then areDogs; else noDogs"></div>
+
+<ng-template #areDogs>
+  <div *ngFor='let dog of dogs; let i = index'>
+    <div *ngIf="dog.age > 3">
+      {{ i + 1 }} Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
+    </div>
   </div>
-</div>
+</ng-template>
+
+<ng-template>
+  <p>Piesków nie ma :(</p>
+</ng-template>
+
+
+
+<!-- <button (click)="addDogs()">Dodaj<button> -->
+<!-- <button (click)="removeDogs()">Usuń</button> -->
