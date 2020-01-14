@@ -1,17 +1,19 @@
-<h3>
+<p>
   Witamy na kursie {{ title | uppercase }}<br>
+</p>
 
-</h3>
-
-
-<ul>
-  <li *ngFor="let day of days">
-    {{ day }}
-  </li>
-</ul>
-
-<div *ngFor='let dog of dogs; let i = index'>
-  {{ i + 1 }} Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
+<div *ngIf="days.length > 0">
+  <ul>
+    <ng-container *ngFor="let day of days, let e = even">
+      <li *ngIf="e">
+        {{ day }}
+      </li>
+    </ng-container>
+  </ul>
 </div>
 
-<app-nowy *ngFor="let i of [1, 2, 3, 4]"></app-nowy>
+<div *ngFor='let dog of dogs; let i = index'>
+  <div *ngIf="dog.age > 3">
+    {{ i + 1 }} Mój pies ma na imię {{ dog.name }} i ma {{ dog.age }} lata
+  </div>
+</div>

@@ -13,7 +13,8 @@ export class AppComponent {
  dogs = new Array<Dog>();
 
  constructor(){
-   this.dogs.push(new Dog('Reksio', 4), new Dog('Max', 11), new Dog('Bethoven', 15));
+   this.dogs.push(new Dog('Reksio', 4), new Dog('Max', 11),
+   new Dog('Bethoven', 15), new Dog('Szaki', 11), new Dog('Bruno', 1), new Dog('Rambo', 2));
  }
 
 }
